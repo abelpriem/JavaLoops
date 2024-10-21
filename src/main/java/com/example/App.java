@@ -1,12 +1,13 @@
 package com.example;
 
 public class App {
-    public static void table(int number) {
-        int result;
+    public static String table(int number) {
+        StringBuilder result = new StringBuilder();
 
         for (int i = 1; i <= 10; i++) {
-            result = number * i;
-            System.out.println(number + " x " + i + " = " + result);
+            result.append(number).append(" x ").append(i).append(" = ").append(number * i).append("\n");
         }
+
+        return result.toString();
     }
 }
